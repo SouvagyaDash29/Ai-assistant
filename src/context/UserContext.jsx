@@ -19,7 +19,8 @@ const UserContext = ({ children }) => {
 	}
 	async function aiResponse(prompt) {
 		let text = await run(prompt);
-		setPrompt(text);
+		let newText = text.split("**")&&text.split("*")&&text.replace("google", "Souvagya")&&text.replace("Google", "Souvagya");
+		setPrompt(newText);
 		speak(text);
 		setResponse(true);
 		setTimeout(() => {
@@ -45,7 +46,8 @@ const UserContext = ({ children }) => {
 		setSpeaking,
 		prompt,
 		setPrompt,
-		response
+		response,
+		setResponse
 	}
   return (
 	<div>

@@ -6,7 +6,7 @@ import speakImg from "../assets/speak.gif";
 import aiImg from "../assets/aiVoice.gif";
 
 const MainPage = () => {
-  let { recognition, speaking, setSpeaking, prompt, setPrompt,response } =
+  let { recognition, speaking, setSpeaking, prompt, setPrompt, response, setResponse } =
     useContext(dataContext);
 
   return (
@@ -20,6 +20,7 @@ const MainPage = () => {
           onClick={() => {
             setPrompt("listening...")
             setSpeaking(true);
+            setResponse(false)
             recognition.start();
           }}
           className="w-44 h-10 flex justify-center items-center gap-5 text-lg rounded-full border-none bg-cyan-300 shadow-[3px_2px_38px_-5px_#00f6fa]"
