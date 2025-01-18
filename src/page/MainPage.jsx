@@ -10,7 +10,7 @@ const MainPage = () => {
     useContext(dataContext);
 
   return (
-    <div className="h-screen bg-black flex flex-col items-center justify-start gap-7 pt-16">
+    <div className="h-svh bg-black flex flex-col items-center justify-start gap-7 pt-16 pb-12">
       <img src={HumanAi} alt="" className="h-[65%] " />
       <span className="text-xl bg-gradient-to-r from-[#22DDE7] to-[#ED047D] bg-clip-text text-transparent">
         {` I'm`} Debian,Your Advance Virtual Assistant
@@ -34,7 +34,7 @@ const MainPage = () => {
           ) : (
             <img src={aiImg} alt="" className="w-[50vh] h-[100px]" />
           )}
-          <p className="text-white text-lg">{prompt}</p>
+          <p className="text-white text-lg text-center px-3">{prompt}</p>
         </div>
       )}
     </div>
